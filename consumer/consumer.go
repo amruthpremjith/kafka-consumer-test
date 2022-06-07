@@ -8,7 +8,7 @@ import (
 
 func ConsumerCreate(group string) *kafka.Consumer {
 	c, err := kafka.NewConsumer(&kafka.ConfigMap{
-		"bootstrap.servers":     "172.18.0.2:32274",
+		"bootstrap.servers":     "",
 		"broker.address.family": "v4",
 		"group.id":              group,
 		"session.timeout.ms":    6000,
@@ -16,8 +16,8 @@ func ConsumerCreate(group string) *kafka.Consumer {
 		"security.protocol":     "SASL_SSL",
 		"sasl.mechanism":        "SCRAM-SHA-512",
 		"sasl.username":         "my-user",
-		"sasl.password":         "sevdcTDEEgMj",
-		"ssl.ca.location":       "/home/amruthpremjith/projects/kafka-producer-1/ca.crt",
+		"sasl.password":         "",
+		"ssl.ca.location":       "",
 		//"ssl.endpoint.identification.algorithm": "",
 		//"ssl.truststore.password": "password",
 	})
